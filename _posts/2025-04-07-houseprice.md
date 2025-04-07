@@ -105,6 +105,7 @@ train_set, test_set=train_test_split(housing,test_size=0.2,random_state=42)
 train_test_split(나눌 데이터 프레임, test_size=테스트 세트로 할당할 데이터의 양, random_state=난수 생성 시드 고정) : 데이터를 훈련 세트와 테스트 세트를 무작위로 나눈다.  
 여기서는 20%의 데이터를 테스트 세트로 할당하고 나머지 80%를 훈련 세트에 포함한다. 난수 생성 시드를 42로 고정하여 실행할 때마다 동일한 분할을 보장한다.  
 
+```python
 # Use np.inf instead of inf
 housing['median_income'].hist(bins=1000, range=(0, 1))
 housing["income_cat"]=pd.cut(housing["median_income"],bins=[0.,1.5,3.0,4.5,6.,np.inf],labels=[1,2,3,4,5])
